@@ -9,6 +9,8 @@ function Login(props) {
     password : ''
   });
 
+//TODO - set up an isLoading spinner or text.
+
   const handleChange = event => {
     setData({
       ...data,
