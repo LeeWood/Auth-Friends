@@ -6,15 +6,17 @@ function FriendList(props) {
   const [list, setList] = useState([]);
   
   useEffect(() => {
-    api().get("/api/friends")
-      .then(results => {
-        console.log("friend results", results.data);
-        setList([results.data]);
-        console.log(list);
-      })
-      .catch(err => {
-        console.log(err)
-      });
+    const fetchFriends = () => {
+      api().get("/api/friends")
+        .then(results => {
+          console.log("friend results", results.data);
+          setList(results.data);
+        })
+        .catch(err => {
+          console.log(err)
+        });
+    };
+    fetchFriends();
   },[])
 
   return (
