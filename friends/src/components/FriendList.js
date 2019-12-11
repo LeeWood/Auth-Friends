@@ -20,9 +20,11 @@ function FriendList(props) {
   return (
     <>
       <h3>My Friend List</h3>
-      <div>{list.map(each => (
-         each.name
-      ))}</div>
+      <div>
+        {list.map(friend => (
+         <div key={friend.id}>{friend.name}</div>
+        ))}
+      </div>
     </>
   )
 }
