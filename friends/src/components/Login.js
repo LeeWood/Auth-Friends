@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import api from '../utils/api';
+
 
 function Login(props) {
 
@@ -17,6 +19,15 @@ function Login(props) {
   const handleSubmit = event => {
     event.preventDefault();
 
+    api()
+      .post("/api/login", data)
+      .then(results => {
+        console.log(results);
+        localStorage.setItem("token", results.data.payload)
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 
   return(
