@@ -24,10 +24,10 @@ function FriendList(props) {
     <>
       <Link to='/newfriend'><button>Add New Friend</button></Link>
       <h3>My Friend List</h3>
-      <div>
+      <div className="friendWrapper">
         {list.map(friend => (
-         <div className='frendCard' key={friend.id}>
-           <p>Name: {friend.name}</p>
+         <div className='friendCard' key={friend.id}>
+           <p><span>Name:</span> {friend.name}</p>
            <p>Age: {friend.age}</p>
            <p>Email: {friend.email}</p>
           </div>
