@@ -11,7 +11,6 @@ function FriendList(props) {
     const fetchFriends = () => {
       api().get("/api/friends")
         .then(results => {
-          console.log("friend results", results.data);
           setList(results.data);
         })
         .catch(err => {

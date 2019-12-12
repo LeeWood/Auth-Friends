@@ -25,7 +25,8 @@ function Login(props) {
       .post("/api/login", data)
       .then(results => {
         console.log(results);
-        localStorage.setItem("token", results.data.payload)
+        localStorage.setItem("token", results.data.payload);
+        props.history.push('/friendlist');
       })
       .catch(err => {
         console.log(err);

@@ -21,7 +21,8 @@ function AddFriend(props) {
     api()
       .post('/api/friends', friendData)
       .then(result => {
-        console.log(result.data)
+        console.log(result.data);
+        props.history.push('/friendlist');
       })
       .catch(error => {
         console.log(error)

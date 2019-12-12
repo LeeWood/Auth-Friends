@@ -5,6 +5,7 @@ import FriendList from './components/FriendList';
 import PrivateRoute from './components/PrivateRoute';
 import Logout from './components/Logout';
 import AddFriend from './components/AddFriend';
+import Home from './components/Home';
 import './App.css';
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
         <Link to='/logout'>Logout</Link>
       </nav>
 
+
+      <Route exact path='/' component={Home} />
       <Route exact path='/login' component={Login} />
       <PrivateRoute exact path='/friendlist' component={FriendList} />
       <PrivateRoute exact path='/logout' component={Logout} />
