@@ -4,6 +4,7 @@ import Login from './components/Login';
 import FriendList from './components/FriendList';
 import PrivateRoute from './components/PrivateRoute';
 import Logout from './components/Logout';
+import AddFriend from './components/AddFriend';
 import './App.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Route exact path='/login' component={Login} />
       <PrivateRoute exact path='/friendlist' component={FriendList} />
       <PrivateRoute exact path='/logout' component={Logout} />
+      <PrivateRoute exact path='/newfriend' component={AddFriend} />
     </div>
   )
 };
